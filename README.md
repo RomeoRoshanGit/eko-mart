@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# EkoMart - Premium Organic & Grocery Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+EkoMart is a modern, high-performance e-commerce platform built with **React** and **Tailwind CSS**. It features a rich, aesthetic design with premium animations, responsive layouts, and a comprehensive suite of pages for a complete shopping experience.
 
-## Available Scripts
+## 🚀 Getting Started
 
-In the project directory, you can run:
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-### `npm start`
+### Installation
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Running Locally
+To start the development server:
+```bash
+npm run dev
+```
+The application will be available at `http://localhost:3000`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Building for Production
+To create an optimized production build:
+```bash
+npm run build
+```
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🏗️ Project Structure
 
-### `npm run build`
+The project follows a standard React component-based architecture:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```text
+eko-mart/
+├── public/              # Static assets (images, icons, svgs)
+├── src/
+│   ├── components/      # Reusable UI components
+│   │   ├── Header.js    # Multi-tier dynamic header
+│   │   ├── Footer.js    # Dark-themed comprehensive footer
+│   │   ├── ProductCard.js # Grid view product cards
+│   │   ├── VendorCard.js  # Dedicated vendor directory cards
+│   │   └── ...          # Sections (Hero, Featured, Categories, etc.)
+│   ├── pages/           # High-level page components
+│   │   ├── HomePage.js
+│   │   ├── ShopPage.js     # Grid/List toggle shop view
+│   │   ├── AboutPage.js    # Multi-section company info
+│   │   ├── VendorsPage.js  # Vendor directory with search
+│   │   ├── BlogPage.js     # Modern grid blog
+│   │   ├── ContactPage.js  # Interactive map & contact info
+│   │   └── AccountPage.js  # User dashboard with sidebar
+│   ├── App.js           # Routing and core logic
+│   ├── index.js         # Application entry point
+│   └── index.css        # Tailwind directives and global styles
+├── tailwind.config.js   # Custom brand colors and theme setup
+└── package.json
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Key Features
 
-### `npm run eject`
+- **Dynamic Header**: Automatically switches styles between the Homepage (Green) and other pages (White).
+- **Dual View Shop**: Toggle between a 5-column grid and a detailed list view with nutritional information.
+- **Vendor Directory**: Full search and status tracking (Open/Closed) for multiple store locations.
+- **Wishlist & Compare**: Functional pages for managing favorite products and side-by-side comparisons.
+- **Interactive About Page**: Professional layout featuring team grids, mission stats, and customer testimonials.
+- **Contact Integration**: Embedded Google Maps with localized office cards.
+- **Responsive Design**: Fully optimized for Desktop, Tablet, and Mobile screens.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React**: Frontend framework
+- **React Router**: Client-side navigation
+- **Tailwind CSS**: Utility-first styling with custom brand tokens
+- **Lucide/SVG Icons**: Optimized vector iconography
+- **Unsplash API**: High-quality network imagery
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developed for EkoMart - Healthy Food, Healthy Life.
