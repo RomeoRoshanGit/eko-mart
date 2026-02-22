@@ -18,12 +18,10 @@ export default function VendorCard({ name, status, rating, address, phone, logo 
 
     return (
         <div className="bg-white border border-[#E6E6E6] rounded-[8px] p-8 flex flex-col hover:shadow-lg transition-all group">
-            {/* Logo Area */}
             <div className="h-[140px] flex items-center justify-center mb-8">
                 <img src={logo} alt={name} className="max-h-full max-w-full object-contain" />
             </div>
 
-            {/* Content Area */}
             <div className="flex flex-col gap-6">
                 <div className="flex items-center justify-between gap-4">
                     <h3 className="text-[#1A1A1A] font-bold text-[24px] leading-tight group-hover:text-primary transition-colors cursor-pointer">
@@ -34,7 +32,6 @@ export default function VendorCard({ name, status, rating, address, phone, logo 
                     </span>
                 </div>
 
-                {/* Rating */}
                 <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1">
                         {stars}
@@ -42,7 +39,6 @@ export default function VendorCard({ name, status, rating, address, phone, logo 
                     <span className="text-[#666666] text-[15px]">{rating.toFixed(2)} out of 5</span>
                 </div>
 
-                {/* Contact Info */}
                 <div className="flex flex-col gap-4">
                     <div className="flex items-start gap-3">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#999" strokeWidth="2" className="shrink-0 mt-0.5">
@@ -63,7 +59,6 @@ export default function VendorCard({ name, status, rating, address, phone, logo 
                     </div>
                 </div>
 
-                {/* Action Button */}
                 <button className="bg-[#629D23] text-white font-bold px-10 py-3.5 rounded-[4px] flex items-center justify-center gap-2 hover:bg-[#4d7a1b] transition-colors mt-2 w-fit">
                     Visit Store
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

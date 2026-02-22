@@ -27,7 +27,6 @@ export default function ContactPage() {
             <Header />
 
             <main className="flex-1 w-full pb-24">
-                {/* Hero Section */}
                 <section className="relative h-[480px] w-full flex items-center justify-center overflow-hidden">
                     <img
                         src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1600&auto=format&fit=crop"
@@ -45,7 +44,6 @@ export default function ContactPage() {
                 </section>
 
                 <div className="max-w-[1385px] mx-auto px-4 mt-24">
-                    {/* Map & Questions Section */}
                     <div className="flex flex-col lg:flex-row gap-12 mb-20 items-start">
                         <div className="flex-1">
                             <h2 className="text-[40px] font-bold text-[#1A1A1A] mb-6">You can ask us questions !</h2>
@@ -74,7 +72,6 @@ export default function ContactPage() {
                         </div>
                     </div>
 
-                    {/* All Offices Grid */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {offices.map(office => (
                             <OfficeCard key={office.id} {...office} />

@@ -13,14 +13,14 @@ export default function PromoSection() {
             bgColor: "bg-[#FFF6E9]",
             badgeText: "Weekend Discount",
             title: "Organic Lemon Flavored Banana Chips",
-            subtitle: "Crispy & Crunchy", // Adjusted from screenshot text for clarity
+            subtitle: "Crispy & Crunchy",
             image: "https://images.unsplash.com/photo-1585059895524-72359e06133a?q=80&w=400&auto=format&fit=crop",
         },
         {
             bgColor: "bg-[#F1F3F2]",
             badgeText: "Weekend Discount",
             title: "Nozes Pecanera Brasil Chocolate Snacks",
-            subtitle: "Healthy & Sweet", // Adjusted from screenshot text for clarity
+            subtitle: "Healthy & Sweet",
             image: "https://images.unsplash.com/photo-1585059895524-72359e06133a?q=80&w=400&auto=format&fit=crop",
         }
     ];

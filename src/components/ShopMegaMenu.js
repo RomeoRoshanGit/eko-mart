@@ -27,7 +27,7 @@ export default function ShopMegaMenu() {
                         <ul className="flex flex-col gap-4">
                             {section.links.map((link, lIdx) => (
                                 <li key={lIdx}>
-                                    <a href="#" className="text-[#666666] hover:text-primary text-[15px] font-medium transition-colors">
+                                    <a href="/" className="text-[#666666] hover:text-primary text-[15px] font-medium transition-colors">
                                         {link}
                                     </a>
                                 </li>
@@ -36,7 +36,6 @@ export default function ShopMegaMenu() {
                     </div>
                 ))}
 
-                {/* Promo Banner */}
                 <div className="flex-[1.5] relative rounded-[8px] overflow-hidden bg-[#F5F5F0] p-8 flex flex-col justify-center min-h-[220px]">
                     <div className="z-10 relative">
                         <h5 className="text-[#1A1A1A] text-lg font-bold leading-tight max-w-[150px] mb-4">

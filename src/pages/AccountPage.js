@@ -182,7 +182,6 @@ export default function AccountPage() {
             <Header />
 
             <main className="flex-1 max-w-[1385px] mx-auto px-4 py-20 w-full flex gap-10">
-                {/* Sidebar */}
                 <aside className="w-[300px] shrink-0">
                     <div className="flex flex-col gap-3">
                         {sidebarItems.map((item, idx) => (
@@ -206,7 +205,6 @@ export default function AccountPage() {
                     </div>
                 </aside>
 
-                {/* Content Area */}
                 <section className="flex-1 min-h-[500px]">
                     {renderContent()}
                 </section>
@@ -214,7 +212,6 @@ export default function AccountPage() {
 
             <Footer />
 
-            {/* Scroll to Top Mockup Button */}
             <div className="fixed bottom-8 right-8 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-[#629D23] cursor-pointer hover:bg-gray-50 transition-colors z-50">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M18 15l-6-6-6 6" />

@@ -1,4 +1,4 @@
-export default function WhiteButton({ text, icon, badge, onClick, className = "", ...props }) {
+export default function WhiteButton({ text, icon, badge, onClick, className = "", textClassName = "", ...props }) {
     return (
         <button
             onClick={onClick}
@@ -13,7 +13,7 @@ export default function WhiteButton({ text, icon, badge, onClick, className = ""
                     </span>
                 )}
             </div>
-            {text && <span className="text-[#1A1A1A] font-semibold text-sm">{text}</span>}
+            {text && <span className={`text-[#1A1A1A] font-semibold text-sm ${textClassName}`}>{text}</span>}
         </button>
     );
 }

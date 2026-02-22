@@ -9,7 +9,6 @@ export default function ComparePage() {
             <Header />
 
             <main className="flex-1 w-full bg-white">
-                {/* Breadcrumbs */}
                 <div className="border-b border-gray-100 py-4">
                     <div className="max-w-[1385px] mx-auto px-4 flex items-center gap-2 text-[14px] text-[#666666]">
                         <Link to="/" className="hover:text-primary transition-colors">Home</Link>

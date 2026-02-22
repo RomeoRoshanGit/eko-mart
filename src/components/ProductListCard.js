@@ -13,7 +13,6 @@ export default function ProductListCard({ image, title, weight, price, oldPrice,
 
     return (
         <div className="bg-[#F3F4F6] rounded-[8px] p-6 flex gap-10 hover:shadow-md transition-shadow relative">
-            {/* Ribbon Discount Badge */}
             {discount && (
                 <div className="absolute top-0 left-6 z-20">
                     <div className="bg-[#FFB800] text-[#1A1A1A] text-[12px] font-bold px-2 pt-2 pb-4 relative leading-none text-center min-w-[45px]">
@@ -29,12 +28,9 @@ export default function ProductListCard({ image, title, weight, price, oldPrice,
                 </div>
             )}
 
-            {/* Product Image */}
             <div className="w-[200px] h-[200px] bg-white rounded-[4px] border border-gray-100 flex items-center justify-center p-4 shrink-0">
                 <img src={image} alt={title} className="max-w-full max-h-full object-contain" />
             </div>
-
-            {/* Content Area */}
             <div className="flex-1 flex flex-col justify-center gap-4">
                 <div className="flex flex-col gap-1">
                     <h3 className="text-[#1A1A1A] font-bold text-[24px] leading-tight hover:text-primary transition-colors cursor-pointer">
@@ -51,7 +47,6 @@ export default function ProductListCard({ image, title, weight, price, oldPrice,
                 </div>
 
                 <div className="flex items-center gap-4 mt-2">
-                    {/* Quantity Selector */}
                     <div className="flex items-center border border-[#E6E6E6] rounded-[6px] h-[48px] bg-white px-3 gap-3">
                         <span className="text-lg font-bold text-[#666666] min-w-[20px] text-center">{quantity}</span>
                         <div className="flex items-center border border-[#E6E6E6] rounded-[4px] overflow-hidden">
@@ -74,7 +69,6 @@ export default function ProductListCard({ image, title, weight, price, oldPrice,
                         </div>
                     </div>
 
-                    {/* Add to Cart Button */}
                     <button className="flex items-center justify-center gap-3 border border-[#629D23] rounded-[8px] h-[48px] px-8 bg-white group hover:bg-[#629D23] transition-all">
                         <span className="text-[#629D23] font-bold text-base group-hover:text-white">Add To Cart</span>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#629D23" strokeWidth="2.5" className="group-hover:stroke-white transition-colors">
@@ -85,7 +79,6 @@ export default function ProductListCard({ image, title, weight, price, oldPrice,
                 </div>
             </div>
 
-            {/* Nutritional Values Column */}
             <div className="w-[200px] flex flex-col gap-2 shrink-0 justify-center">
                 <h4 className="text-[#1A1A1A] font-bold text-[15px] mb-2">Nutritional Values</h4>
                 {nutritionalValues.map((item, idx) => (

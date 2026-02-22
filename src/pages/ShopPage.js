@@ -5,8 +5,8 @@ import ProductCard from '../components/ProductCard';
 import ProductListCard from '../components/ProductListCard';
 
 export default function ShopPage() {
-    const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'list'
-    const [sortBy, setSortBy] = useState('Latest');
+    const [viewMode, setViewMode] = useState('grid');
+    const [sortBy] = useState('Latest');
 
     const products = [
         { id: 1, title: "Details Profitable business makes your profit", weight: "500g Pack", price: "29.00", oldPrice: "36.00", discount: "25%", image: "https://images.unsplash.com/photo-1621648057993-9c593630f9d9?q=80&w=300&auto=format&fit=crop" },
@@ -30,7 +30,6 @@ export default function ShopPage() {
             <main className="flex-1 w-full pb-24">
                 <div className="max-w-[1385px] mx-auto px-4 mt-10">
 
-                    {/* Top Controls Bar */}
                     <div className="bg-[#F3F4F6] px-8 py-6 rounded-t-[12px] flex items-center justify-between border-b border-gray-200">
                         <span className="text-[#666666] text-[15px]">Showing 1–20 of 57 results</span>
 
@@ -67,7 +66,6 @@ export default function ShopPage() {
                         </div>
                     </div>
 
-                    {/* Filters Bar */}
                     <div className="bg-[#F3F4F6] px-8 py-8 rounded-b-[12px] flex items-center gap-4 mb-10">
                         {filters.map((filter, idx) => (
                             <div key={idx} className="flex-1">
@@ -87,7 +85,6 @@ export default function ShopPage() {
                         </button>
                     </div>
 
-                    {/* Product Grid/List View */}
                     {viewMode === 'grid' ? (
                         <div className="grid grid-cols-5 gap-6">
                             {products.concat(products).map((product, idx) => (

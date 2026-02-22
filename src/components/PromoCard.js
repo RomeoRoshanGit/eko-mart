@@ -29,7 +29,6 @@ export default function PromoCard({ bgColor, badgeText, title, subtitle, image, 
                 </button>
             </div>
 
-            {/* Product Image */}
             <div className="absolute bottom-0 right-0 w-[240px] h-[180px] flex items-end justify-end p-2 pointer-events-none">
                 <img src={image} alt={title} className="max-w-full max-h-full object-contain transform translate-y-4 hover:-translate-y-2 transition-transform duration-500" />
             </div>

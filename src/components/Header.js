@@ -6,6 +6,7 @@ import NavDropdown from "./NavDropdown";
 import ShopMegaMenu from "./ShopMegaMenu";
 import CartDropdown from "./CartDropdown";
 import CategoryDropdown from "./CategoryDropdown";
+import MobileDrawer from "./MobileDrawer";
 
 export default function Header() {
     const navigate = useNavigate();
@@ -16,6 +17,7 @@ export default function Header() {
     const [isWishlistHovered, setIsWishlistHovered] = useState(false);
     const [isCartHovered, setIsCartHovered] = useState(false);
     const [isCategoryHovered, setIsCategoryHovered] = useState(false);
+    const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
     const navItems = [
         { label: "Home", navigateTo: "/", items: ["Home One", "Home Two", "Home Three", "Home Four", "Home Five"] },
@@ -25,12 +27,17 @@ export default function Header() {
         {
             label: "Pages",
             items: [
-                { label: "Dashboard", badge: "New" },
-                "About", "Store", "Invoice", "Contact", "Register", "Login", "Privacy Policy", "Cookies Policy", "Terms & Condition"
+                { label: "Dashboard", badge: "New", navigateTo: "/account" },
+                { label: "About", navigateTo: "/about" },
+                { label: "Store", navigateTo: "/shop" },
+                { label: "Contact", navigateTo: "/contact" },
+                { label: "Wishlist", navigateTo: "/wishlist" },
+                { label: "Compare", navigateTo: "/compare" },
+                "Invoice", "Register", "Login", "Privacy Policy", "Cookies Policy", "Terms & Condition"
             ]
         },
         { label: "Blog", navigateTo: "/blog", items: ["Blog", "Blog List Left Sidebar", "Blog List Right Sidebar", "Blog Details"] },
-        { label: "Dashboard", navigateTo: "/dashboard" },
+        { label: "Dashboard", navigateTo: "/account" },
         { label: "Contact", navigateTo: "/contact" }
     ];
 
@@ -49,7 +56,14 @@ export default function Header() {
 
     return (
         <header className="w-full flex flex-col font-sans">
-            <div className="w-full bg-primary text-[#B3B3B3] text-sm py-2">
+            <MobileDrawer
+                isOpen={isDrawerOpen}
+                onClose={() => setIsDrawerOpen(false)}
+                navItems={navItems}
+                isHome={isHome}
+            />
+
+            <div className="w-full bg-primary text-[#B3B3B3] text-sm py-2 hidden lg:block">
                 <div className="max-w-[1385px] mx-auto px-4 flex justify-between items-center">
                     <div className="flex gap-4 text-white">
                         <p>FREE delivery & 40% Discount for next 3 orders! <span className="text-white cursor-pointer">Place your 1st order in.</span></p>
@@ -62,7 +76,7 @@ export default function Header() {
 
             {/* Tier 1.5: Secondary Utility Bar (Visible on non-home pages) */}
             {!isHome && (
-                <div className="w-full bg-white border-b border-gray-100 py-2.5">
+                <div className="w-full bg-white border-b border-gray-100 py-2.5 hidden lg:block">
                     <div className="max-w-[1385px] mx-auto px-4 flex justify-between items-center text-[#666666] text-[13px] font-medium">
                         <div className="flex items-center gap-6">
                             <Link to="/about" className="hover:text-primary transition-colors">About Us</Link>
@@ -91,15 +105,27 @@ export default function Header() {
                 </div>
             )}
 
-            <div className={`w-full transition-colors duration-300 ${isHome ? "bg-[#629D23] border-t border-white/20" : "bg-white"} py-5`}>
-                <div className="max-w-[1385px] mx-auto px-4 flex items-center justify-between gap-10">
+            <div className={`w-full transition-colors duration-300 ${isHome ? "bg-[#629D23] border-t border-white/20" : "bg-white"} py-4 lg:py-5`}>
+                <div className="max-w-[1385px] mx-auto px-4 flex items-center justify-between gap-4 lg:gap-10">
                     <div className="flex items-center shrink-0">
+                        {/* Mobile Menu Toggle */}
+                        <button
+                            onClick={() => setIsDrawerOpen(true)}
+                            className={`lg:hidden mr-4 p-2 rounded-md ${isHome ? "text-white hover:bg-white/10" : "text-[#1A1A1A] hover:bg-gray-100"}`}
+                        >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="3" y1="12" x2="21" y2="12" />
+                                <line x1="3" y1="6" x2="21" y2="6" />
+                                <line x1="3" y1="18" x2="21" y2="18" />
+                            </svg>
+                        </button>
+
                         <Link to="/">
-                            <img src={isHome ? "/assets/images/logo.svg" : "/assets/images/logo-01.svg"} alt="EkoMart Logo" className="h-10" />
+                            <img src={isHome ? "/assets/images/logo.svg" : "/assets/images/logo-01.svg"} alt="EkoMart Logo" className="h-8 lg:h-10" />
                         </Link>
                     </div>
 
-                    <div className="flex-1 max-w-[700px]">
+                    <div className="flex-1 max-w-[700px] hidden lg:block">
                         <div className={`flex items-center rounded-md shadow-sm relative ${isHome ? "bg-white" : "bg-[#F3F4F6]"}`}>
                             <div
                                 className={`flex items-center px-5 py-3 border-r cursor-pointer group relative ${isHome ? "border-gray-200 hover:bg-gray-50" : "border-gray-300 hover:bg-gray-200/50"}`}
@@ -132,10 +158,9 @@ export default function Header() {
                         </div>
                     </div>
 
-                    {/* Action Buttons */}
-                    <div className="flex items-center gap-3 shrink-0">
+                    <div className="hidden lg:flex items-center gap-3 shrink-0">
                         <WhiteButton
-                            className="px-4 py-3 h-12"
+                            className="hidden sm:flex px-4 py-3 h-10 lg:h-12"
                             text="Account"
                             icon={
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-700">
@@ -146,7 +171,7 @@ export default function Header() {
                             onClick={() => navigate("/account")}
                         />
                         <WhiteButton
-                            className="w-12 h-12"
+                            className="w-10 h-10 lg:w-12 lg:h-12"
                             badge={0}
                             icon={
                                 <img src="/assets/icons/account.svg" alt="EkoMart Logo" className="h-5" />
@@ -160,7 +185,8 @@ export default function Header() {
                             onMouseLeave={() => setIsWishlistHovered(false)}
                         >
                             <WhiteButton
-                                className={`px-4 py-3 h-12 transition-colors`}
+                                className={`px-4 py-3 h-10 lg:h-12 transition-colors flex items-center justify-center`}
+                                textClassName="hidden md:block"
                                 text="Wishlist"
                                 badge={0}
                                 icon={
@@ -178,7 +204,8 @@ export default function Header() {
                             onMouseLeave={() => setIsCartHovered(false)}
                         >
                             <WhiteButton
-                                className={`px-4 py-3 h-12 transition-colors`}
+                                className={`px-4 py-3 h-10 lg:h-12 transition-colors flex items-center justify-center`}
+                                textClassName="hidden md:block"
                                 text="Cart"
                                 badge={0}
                                 icon={
@@ -194,10 +221,25 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
+
+                <div className="px-4 mt-3 lg:hidden">
+                    <div className={`flex items-center rounded-md p-1 ${isHome ? "bg-white" : "bg-gray-100"}`}>
+                        <input
+                            type="text"
+                            placeholder="Search products..."
+                            className="flex-1 px-4 py-2 outline-none bg-transparent text-sm"
+                        />
+                        <button className="bg-primary text-white p-2 rounded-md">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </div>
 
-            {/* Tier 3: Navigation Bar */}
-            <div className={`w-full border-t py-3 transition-all duration-300 ${isHome ? "bg-[#629D23] border-white/10" : "bg-white border-gray-100"} ${isSticky ? "fixed top-0 left-0 z-[100] shadow-lg animate-slideDown" : ""}`}>
+            <div className={`w-full border-t py-3 transition-all duration-300 hidden lg:block ${isHome ? "bg-[#629D23] border-white/10" : "bg-white border-gray-100"} ${isSticky ? "fixed top-0 left-0 z-[100] shadow-lg animate-slideDown" : ""}`}>
                 <div className="max-w-[1385px] mx-auto px-4 flex items-center justify-between">
                     <nav className={`flex items-center gap-8 ${isHome ? "text-white" : "text-[#1A1A1A]"} text-sm font-semibold relative`}>
                         {navItems.map((item, idx) => (
@@ -221,8 +263,6 @@ export default function Header() {
                     </nav>
 
                     <div className="flex items-center gap-10">
-
-
                         <div className={`flex items-center ${isHome ? "text-white" : "text-[#666666]"} text-sm font-medium gap-2`}>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
@@ -230,13 +270,10 @@ export default function Header() {
                             </svg>
                             <span>Delivery: <span className="font-normal opacity-90">258 FKD Street, Berlin</span></span>
                         </div>
-
-
                     </div>
                 </div>
             </div>
-            {/* Spacer to prevent jump when header becomes sticky */}
-            {isSticky && <div className="h-[48px]"></div>}
+            {isSticky && <div className="hidden lg:block h-[48px]"></div>}
         </header>
     );
 }

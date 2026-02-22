@@ -34,7 +34,6 @@ export default function FeaturedCategories() {
     return (
         <section className="w-full py-12">
             <div className="max-w-[1385px] mx-auto px-4">
-                {/* Header */}
                 <div className="flex justify-between items-center mb-8">
                     <h2 className="text-2xl font-bold text-[#1A1A1A]">Featured Categories</h2>
                     <div className="flex gap-2">
@@ -57,7 +56,6 @@ export default function FeaturedCategories() {
                     </div>
                 </div>
 
-                {/* Categories List */}
                 <div className="bg-[#F2F2F2] p-8 rounded-[8px]">
                     <div
                         ref={scrollRef}

@@ -9,7 +9,6 @@ export default function WishlistPage() {
             <Header />
 
             <main className="flex-1 w-full pb-20">
-                {/* Breadcrumbs */}
                 <div className="bg-white border-b border-gray-100 py-4 mb-10">
                     <div className="max-w-[1385px] mx-auto px-4 flex flex-col gap-4">
                         <div className="flex items-center gap-2 text-[14px] text-[#666666]">
@@ -24,7 +23,6 @@ export default function WishlistPage() {
                 </div>
 
                 <div className="max-w-[1385px] mx-auto px-4 flex flex-col gap-8">
-                    {/* Progress Bar Card */}
                     <div className="bg-white p-10 rounded-[4px] border border-gray-100 shadow-sm flex flex-col gap-5">
                         <p className="text-[#666666] text-[15px] font-medium">
                             Add <span className="text-[#629D23] font-bold">$59.69</span> to cart and get free shipping
@@ -34,7 +32,6 @@ export default function WishlistPage() {
                         </div>
                     </div>
 
-                    {/* Wishlist Table */}
                     <div className="bg-white rounded-[4px] border border-gray-100 shadow-sm overflow-hidden flex flex-col">
                         <table className="w-full text-left border-collapse">
                             <thead className="border-b border-gray-100">
@@ -47,7 +44,6 @@ export default function WishlistPage() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {/* Empty for now as per screenshot focus */}
                                 <tr className="h-40">
                                     <td colSpan="5"></td>
                                 </tr>
@@ -65,7 +61,6 @@ export default function WishlistPage() {
 
             <Footer />
 
-            {/* Scroll to Top Mockup Button */}
             <div className="fixed bottom-8 right-8 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-[#629D23] cursor-pointer hover:bg-gray-50 transition-colors z-[100]">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M18 15l-6-6-6 6" />

@@ -7,7 +7,6 @@ export default function AboutPage() {
         <div className="min-h-screen flex flex-col bg-white overflow-x-hidden">
             <Header />
 
-            {/* Hero Section */}
             <section className="relative h-[600px] w-full flex items-center justify-center">
                 <div className="absolute inset-0">
                     <img
@@ -30,7 +29,6 @@ export default function AboutPage() {
                     </button>
                 </div>
 
-                {/* Floating Stats Card */}
                 <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full max-w-[1385px] px-4">
                     <div className="bg-white rounded-[12px] shadow-[0_10px_40px_rgba(0,0,0,0.08)] py-16 px-10 flex items-center justify-between">
                         <div className="flex items-center gap-6">
@@ -56,7 +54,6 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Mission Section */}
             <section className="pt-52 pb-24 max-w-[1385px] mx-auto px-4 w-full">
                 <div className="grid grid-cols-2 gap-20 items-center">
                     <div className="rounded-[12px] overflow-hidden shadow-xl">
@@ -92,7 +89,6 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Expert Team Section */}
             <section className="py-24 bg-white">
                 <div className="max-w-[1385px] mx-auto px-4 text-center">
                     <h2 className="text-[48px] font-bold text-[#1A1A1A] mb-4">Meet Our Expert Team</h2>
@@ -125,7 +121,6 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Why Choose Us Section */}
             <section className="py-24 bg-[#F9F9F9]">
                 <div className="max-w-[1385px] mx-auto px-4 text-center">
                     <h2 className="text-[48px] font-bold text-[#1A1A1A] mb-4">Why You Choose Us?</h2>
@@ -168,7 +163,6 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            {/* Testimonials Section */}
             <section className="py-24 bg-white">
                 <div className="max-w-[1385px] mx-auto px-4">
                     <h2 className="text-[48px] font-bold text-[#1A1A1A] mb-16">Customer Feedbacks</h2>
@@ -209,7 +203,6 @@ export default function AboutPage() {
 
             <Footer />
 
-            {/* Scroll to Top Mockup Button */}
             <div className="fixed bottom-8 right-8 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-[#629D23] cursor-pointer hover:bg-gray-50 transition-colors z-[100]">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M18 15l-6-6-6 6" />

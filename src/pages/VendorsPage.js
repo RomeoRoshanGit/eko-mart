@@ -5,7 +5,7 @@ import VendorCard from '../components/VendorCard';
 
 export default function VendorsPage() {
     const [viewMode, setViewMode] = useState('grid');
-    const [sortBy, setSortBy] = useState('Latest');
+    const [sortBy] = useState('Latest');
 
     const vendors = [
         {
@@ -51,7 +51,6 @@ export default function VendorsPage() {
             <Header />
 
             <main className="flex-1 w-full pb-24">
-                {/* Search Header */}
                 <section className="pt-20 pb-24 text-center bg-white px-4">
                     <h1 className="text-[64px] font-bold text-[#1A1A1A] mb-12">Vendors List</h1>
 
@@ -71,7 +70,6 @@ export default function VendorsPage() {
                 </section>
 
                 <div className="max-w-[1385px] mx-auto px-4">
-                    {/* Controls Bar */}
                     <div className="flex items-center justify-between py-8 border-t border-gray-100 mb-4">
                         <span className="text-[#666666] text-[15px]">Showing 1–20 of 57 results</span>
 
@@ -108,7 +106,6 @@ export default function VendorsPage() {
                         </div>
                     </div>
 
-                    {/* Vendors Grid */}
                     <div className="grid grid-cols-4 gap-8">
                         {vendors.concat(vendors).map((vendor, idx) => (
                             <VendorCard key={idx} {...vendor} />
@@ -119,7 +116,6 @@ export default function VendorsPage() {
 
             <Footer />
 
-            {/* Scroll to Top Mockup Button */}
             <div className="fixed bottom-8 right-8 w-12 h-12 bg-white rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-[#629D23] cursor-pointer hover:bg-gray-50 transition-colors z-[100]">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M18 15l-6-6-6 6" />

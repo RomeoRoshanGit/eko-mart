@@ -5,7 +5,7 @@ export default function NavDropdown({ items }) {
                 {items.map((item, index) => (
                     <a
                         key={index}
-                        href="#"
+                        href="/"
                         className="px-6 py-2.5 text-[#666666] hover:text-primary hover:bg-gray-50 text-[15px] font-medium transition-all"
                     >
                         {typeof item === 'string' ? item : (

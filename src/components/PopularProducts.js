@@ -7,14 +7,14 @@ export default function PopularProducts() {
 
     const products = {
         "Frozen Foods": [
-            { id: 1, title: "Dalivaring business makes your profit", weight: "500g Pack", price: "63.00", oldPrice: "36.00", discount: "25%", image: "https://images.unsplash.com/photo-1621648057993-9c593630f9d9?q=80&w=300&auto=format&fit=crop" },
-            { id: 2, title: "Firebase business makes your profit", weight: "500g Pack", price: "50.00", oldPrice: "36.00", discount: "25%", image: "https://images.unsplash.com/photo-1610832958506-ee563384239d?q=80&w=300&auto=format&fit=crop" },
+            { id: 1, title: "Dalivaring business makes your profit", weight: "500g Pack", price: "63.00", oldPrice: "36.00", discount: "25%", image: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=300&auto=format&fit=crop" },
+            { id: 2, title: "Firebase business makes your profit", weight: "500g Pack", price: "50.00", oldPrice: "36.00", discount: "25%", image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=300&auto=format&fit=crop" },
             { id: 3, title: "Netlyfy business makes your profit", weight: "500g Pack", price: "19.00", oldPrice: "36.00", discount: "25%", image: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?q=80&w=300&auto=format&fit=crop" },
             { id: 4, title: "Details business makes your profit", weight: "500g Pack", price: "90.00", oldPrice: "36.00", discount: "25%", image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=300&auto=format&fit=crop" },
         ],
         "Diet Foods": [
             { id: 5, title: "Healthy Salad Mix Organic", weight: "250g Pack", price: "12.00", oldPrice: "15.00", discount: "20%", image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=300&auto=format&fit=crop" },
-            { id: 6, title: "Organic Green Smoothie", weight: "500ml", price: "8.00", oldPrice: "10.00", discount: "20%", image: "https://images.unsplash.com/photo-1610832958506-ee563384239d?q=80&w=300&auto=format&fit=crop" },
+            { id: 6, title: "Organic Green Smoothie", weight: "500ml", price: "8.00", oldPrice: "10.00", discount: "20%", image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=300&auto=format&fit=crop" },
         ],
         "Healthy Foods": [
             { id: 7, title: "Mixed Organic Nuts", weight: "1kg", price: "45.00", oldPrice: "55.00", discount: "18%", image: "https://images.unsplash.com/photo-1550989460-0adf9ea622e2?q=80&w=300&auto=format&fit=crop" },
